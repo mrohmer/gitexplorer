@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dark: JSON.parse(localStorage.getItem('dark')) || false,
+      dark: JSON.parse(localStorage.getItem('dark')) || matchMedia('(prefers-color-scheme: dark)').matches,
       fastType: JSON.parse(localStorage.getItem('fastType')) || false,
       firstOption: null,
       showSecond: false,
